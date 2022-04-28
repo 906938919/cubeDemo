@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            perspective: 1200px;
+        }
+
+        section {
+            position: relative;
+            transform: rotate3d(0, 1, 0, -26deg);
+            transform-style: preserve-3d;
+            animation: myMove 10s linear infinite;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: 200px auto;
+            opacity: .5;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        span {
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+
+
+        div:nth-of-type(1) {
+            /* background-color: red; */
+            /* transform: rotateX(30deg); */
+            transform: translateZ(150px);
+        }
+
+        div:nth-of-type(2) {
+            background-color: purple;
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+
+        div:nth-of-type(3) {
+            background-color: blue;
+            transform: rotateX(90deg) translateZ(150px);
+        }
+
+        div:nth-of-type(4) {
+            background-color: green;
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+
+        div:nth-of-type(5) {
+            background-color: white;
+            transform: rotateY(90deg) translateZ(150px);
+        }
+
+        div:nth-of-type(6) {
+            background-color: yellow;
+            transform: rotateY(180deg) translateZ(150px);
+        }
+
+        @keyframes myMove {
+            0% {
+                transform: rotate3d(0, 1, 0, 0deg)
+            }
+
+            20% {
+                transform: rotate3d(0, 1, 0, 72deg)
+            }
+
+            40% {
+                transform: rotate3d(0, 1, 0, 144deg)
+            }
+
+            60% {
+                transform: rotate3d(0, 1, 0, 216deg)
+            }
+
+            80% {
+                transform: rotate3d(0, 1, 0, 288deg)
+            }
+
+            100% {
+                transform: rotate3d(0, 1, 0, 360deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div><img src="./DedSec.jpg" alt=""><span>壹</span></div>
+        <div><img src="./DedSec.jpg" alt=""><span>贰</span></div>
+        <div><img src="./DedSec.jpg" alt=""><span>叁</span></div>
+        <div><img src="./DedSec.jpg" alt=""><span>肆</span></div>
+        <div><img src="./DedSec.jpg" alt=""><span>伍</span></div>
+        <div><img src="./DedSec.jpg" alt=""><span>陆</span></div>
+    </section>
+</body>
+
+</html>
